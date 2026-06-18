@@ -1,0 +1,1371 @@
+html{
+    scroll-behavior:smooth;
+}
+
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#f4f7fb;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#00153c;
+    color:white;
+    padding:12px 7%;
+    display:flex;
+    justify-content:flex-end;
+    gap:40px;
+    font-size:15px;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:70px;   /* fixed chhoti height */
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 7%;
+    box-shadow:0 5px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:999;
+    overflow:visible;
+}
+
+
+nav{
+    display:flex;
+    align-items:center;
+    gap: 35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111;
+    font-weight:500;
+    position:relative;
+}
+
+nav a::after{
+    content:'';
+    width:0%;
+    height:3px;
+    background:#1565ff;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.call-btn{
+    background:#1565ff;
+    color:white;
+    padding:14px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* MENU */
+
+.menu{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu span{
+    width:28px;
+    height:3px;
+    background:#00153c;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,18,58,0.65), rgba(0,18,58,0.65)),
+    url("background.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    padding:80px 7%;
+}
+
+
+.hero-container{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+/* LEFT */
+
+.hero-left{
+    color:white;
+}
+
+.hero-left h4{
+    font-size:34px;
+    font-weight:400;
+}
+
+.hero-left h1{
+    font-size:82px;
+    line-height:1;
+    font-weight:800;
+    margin:15px 0;
+}
+
+.hero-left .blue{
+    color:#2f82ff;
+}
+
+.hero-left p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+    max-width:650px;
+}
+
+
+
+.feature{
+    font-size:18px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#1565ff;
+    color:white;
+    padding:18px 35px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* RIGHT */
+
+/* Stats Section */
+
+.stats{
+    width:100%;
+    padding:60px 7%;
+    background:#ffffff;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    text-align:center;
+}
+
+.stats-box{
+    background:#f8f9fc;
+    padding:30px 20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.stats-box:hover{
+    transform:translateY(-5px);
+}
+
+.stats-box h2{
+    font-size:40px;
+    color:#007bff;
+    font-weight:700;
+}
+
+.stats-box p{
+    margin-top:8px;
+    color:#555;
+    font-size:16px;
+    font-weight:500;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    .stats-box h2{
+        font-size:30px;
+    }
+
+    .stats-box p{
+        font-size:14px;
+    }
+}
+
+
+/* SERVICES */
+
+.services{
+    padding:90px 7%;
+    background:white;
+}
+/* REVIEWS */
+
+.reviews{
+    padding:90px 7%;
+    background:#f4f7fb;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.review-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.review-card h3{
+    margin:15px 0 10px;
+    color:#00153c;
+}
+
+.review-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+.stars{
+    font-size:22px;
+}
+
+/* REVIEW FORM */
+
+.review-form{
+    margin-top:60px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.review-form h3{
+    margin-bottom:25px;
+    color:#00153c;
+}
+
+.review-form form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+}
+
+.review-form textarea{
+    min-height:120px;
+    resize:none;
+}
+
+.review-form button{
+    background:#0077ff;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.review-form button:hover{
+    background:#005edb;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:55px;
+    color:#00153c;
+}
+
+.title p{
+    color:#666;
+    margin-top:10px;
+    font-size:18px;
+}
+
+
+
+
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    background:#1565ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:35px;
+    margin-bottom:25px;
+}
+
+
+
+/* CONTACT */
+
+.contact{
+    padding:90px 7%;
+}
+
+.contact-box{
+    background:#00153c;
+    color:white;
+    border-radius:30px;
+    padding:70px 30px;
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#1565ff;
+    color:white;
+    text-decoration:none;
+    padding:16px 40px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#000d26;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-container{
+    grid-template-columns:1fr;
+}
+
+
+
+
+@media(max-width:768px){
+
+.hero{
+    min-height:auto;
+    padding:40px 20px;
+    background-size:cover;
+    background-position:center;
+}
+
+}
+
+
+.hero-right{
+    margin-top:25px;
+}
+
+.hero-right img{
+    width:80%;
+    max-width:260px;
+    margin:auto;
+}
+
+
+.menu{
+    display:flex;
+}
+
+nav{
+    position:absolute;
+    top:95px;
+    right:5%;
+    background:white;
+    width:240px;
+    flex-direction:column;
+    padding:25px;
+    border-radius:20px;
+    display:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+nav.active{
+    display:flex;
+}
+
+
+
+.hero-left h4{
+    font-size:24px;
+}
+
+.hero-left h1{
+    font-size:42px;
+}
+
+.hero-left p{
+    font-size:15px;
+}
+
+.feature{
+    font-size:15px;
+}
+
+.hero-btn{
+    font-size:16px;
+    padding:15px 25px;
+}
+
+.title h2,
+.contact-box h2{
+    font-size:35px;
+}
+
+
+}
+
+
+@media(min-width:769px) and (max-width:1024px){
+   /* tablet styles */
+}
+
+/* MOBILE HERO IMAGE FIX */
+
+
+@media(max-width:768px){
+
+.hero-right img.desktop-img{
+    display:none;
+
+
+
+}
+
+
+}/* FIX LOGO */
+
+.logo img{
+    width:170px;
+    height:auto;
+    object-fit:contain;
+    margin-top:0;
+    display:block;
+}
+/* MOBILE LOGO */
+
+@media(max-width:768px){
+
+ /*je moblie ka logo hai sab se uper bala logo uska code fix hai */   
+
+.logo img{
+    width:80px;
+}
+
+}
+/* MOBILE HERO TEXT FIX */
+
+@media(max-width:768px){
+
+.hero-left{
+    text-align:left;
+}
+
+.hero-left h1{
+    font-size:38px;
+    line-height:1.3;
+    word-break:break-word;
+}
+
+.hero-left h4{
+    font-size:22px;
+}
+
+.hero-left p{
+    font-size:16px;
+    line-height:1.7;
+}
+
+.features{
+    justify-content:center;
+    gap:15px;
+}
+
+.feature{
+    font-size:14px;
+}
+
+}
+/* FEATURES SECTION */
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-size:18px;
+    font-weight:500;
+}
+
+.feature img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+/* MOBILE FIX */
+
+@media(max-width:768px){
+
+.features{
+    justify-content:center;
+    gap:18px;
+}
+
+.feature{
+    width:100%;
+    justify-content:center;
+    font-size:15px;
+}
+
+.feature img{
+    width:34px;
+    height:34px;
+}
+
+}
+
+/* Hide hero image on Mobile & Tablet */
+
+
+
+/* TOPBAR MOBILE FIX */
+
+@media(max-width:768px){
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 10px;
+    gap:5px;
+    font-size:10px;
+}
+
+.topbar div{
+    white-space:nowrap;
+}
+
+}
+/* moblie ke liye our service ka code fix */
+
+
+
+/* MOBILE */
+@media(max-width:768px){
+
+.service-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    padding:25px 20px;
+}
+
+.card h3{
+    font-size:22px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+}
+
+/* TABLET */
+@media(min-width:769px) and (max-width:1024px){
+
+.service-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card h3{
+    font-size:24px;
+}
+
+}
+@media(max-width:768px){
+
+.title p{
+    white-space:nowrap;
+    font-size:14px;
+}
+
+}
+.title h2{
+    position:relative;
+    display:inline-block;
+    color:#00153c;
+}
+
+.title h2::before,
+.title h2::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    width:60px;
+    height:4px;
+    background:#1565ff;
+    border-radius:10px;
+}
+
+.title h2::before{
+    right:100%;
+    margin-right:10px;
+}
+
+.title h2::after{
+    left:100%;
+    margin-left:10px;
+}
+@media(max-width:768px){
+
+.title h2::before,
+.title h2::after{
+    width:30px;
+    height:8px;
+}
+
+}
+.title h2{
+    font-size:42px;
+    position:relative;
+    display:inline-block;
+}
+
+@media(max-width:768px){
+
+.title h2{
+    font-size:26px;
+}
+
+}
+/* mobie ourservice ke niche ka block jis me service dali hai uska code fix */
+
+@media(max-width:768px){
+
+
+.card h3{
+    font-size:24px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+}
+.service-grid{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.icon{
+    width:100px;
+    height:100px;
+    min-width:100px;
+    border-radius:50%;
+    background:#1565ff;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+}
+
+.card-content{
+    flex:1;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    font-size:30px;
+    color:#00153c;
+}
+
+.card-content p{
+    font-size:17px;
+    color:#555;
+    line-height:1.7;
+}
+/* tablat ke liye hai */
+
+/* TABLET */
+
+@media (max-width:1024px){
+
+.card{
+    gap:20px;
+    padding:20px;
+}
+
+.icon{
+    width:80px;
+    height:80px;
+    min-width:80px;
+    font-size:34px;
+}
+
+.card-content h3{
+    font-size:24px;
+}
+
+.card-content p{
+    font-size:15px;
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:5px 5px;
+    border-radius:15px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    min-width:55px;
+    font-size:22px;
+}
+
+.card-content h3{
+    font-size:17px;
+    margin-bottom:4px;
+    line-height:1.2;
+}
+
+.card-content p{
+    font-size:12px;
+    line-height:1.4;
+    margin:0;
+}
+
+.service-grid{
+    gap:15px;
+}
+}
+
+/* moblie ki head line section hai uska code fix */
+
+@media(max-width:768px){
+
+.hero-left h4{font-size:16px;}
+
+.hero-left h1{
+    font-size:28px;
+    line-height:1.2;
+}
+
+.hero-left p{
+    font-size:13px;
+    line-height:1.5;
+}
+
+.feature{
+    font-size:12px;
+}
+
+}/* HERO IMAGE */
+
+.hero-right{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-right img{
+    width:100%;
+    max-width:450px;
+    height:auto;
+    display:block;
+}
+
+/* TABLET */
+
+@media (max-width:992px){
+
+.hero-container{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+}
+
+.hero-left{
+    order:2;
+}
+
+.hero-right{
+    order:1;
+}
+
+.hero-right img{
+    max-width:320px;
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.hero{
+    padding:100px 20px 50px;
+}
+
+.hero-right img{
+    max-width:250px;
+    width:80%;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+.features{
+    justify-content:center;
+}
+
+}/* Hide Hero Logo on Mobile & Tablet */
+
+@media (max-width:1024px){
+
+.hero-right{
+    display:none;
+}
+
+.hero-container{
+    grid-template-columns:1fr;
+}
+
+}/* MOBILE + TABLET HEADER FIX */
+
+@media (max-width:1024px){
+
+header{
+    padding:0 15px;
+}
+
+
+
+.logo img{
+    width:70px;
+}
+
+nav{
+    top:75px;
+}
+
+}@media (max-width:1024px){
+
+header{
+    display:flex;
+    align-items:center;
+}
+
+
+.menu{
+    display:flex;
+}
+
+}/* Hide Call Now Button Mobile & Tablet */
+
+@media (max-width:1024px){
+
+.call-btn{
+    display:none !important;
+}
+
+}
+/*....................................................................................*/
+
+
+
+
+
+
+
+
+
+/* Mobile & Tablet Hide Call Buttons */
+
+@media (max-width:1024px){
+
+    .call-btn,
+    .hero-btn{
+        display:none !important;
+    }
+
+}.hero{
+    background:
+    linear-gradient(rgba(0,18,58,0.65), rgba(0,18,58,0.65)),
+    url("background.png");
+
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width:768px){
+
+.hero-left h4{
+    font-size:14px !important;
+}
+
+.hero-left h1{
+    font-size:26px !important;
+    line-height:1.1 !important;
+}
+
+.hero-left p{
+    font-size:13px !important;
+    line-height:1.5 !important;
+}
+
+.feature{
+    font-size:12px !important;
+}
+
+}@media(max-width:768px){
+
+.hero{
+    min-height:100vh;
+    align-items:flex-start !important;
+    padding-top:20px !important;
+}
+
+.hero-container{
+    margin-top:0 !important;
+}
+
+}@media (max-width:768px){
+
+.hero{
+    min-height:100vh;
+    padding:20px 15px;
+    align-items:flex-start !important;
+}
+
+.hero-left{
+    margin-top:0;
+}
+
+.hero-left h4{
+    font-size:12px !important;
+    margin-bottom:5px;
+}
+
+.hero-left h1{
+    font-size:20px !important;
+    line-height:1.1 !important;
+    margin:5px 0;
+}
+
+.hero-left p{
+    font-size:11px !important;
+    line-height:1.4 !important;
+    margin-bottom:10px;
+}
+
+.features{
+    gap:8px;
+    margin-bottom:10px;
+}
+
+.feature{
+    font-size:11px !important;
+}
+
+}@media (max-width:768px){
+
+.features{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    gap:8px;
+}
+
+.feature{
+    width:100%;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    font-size:11px;
+}
+
+}@media (max-width:768px){
+
+.hero{
+    min-height:auto !important;
+    height:auto !important;
+    padding:20px 15px 30px;
+    background-size:cover;
+    background-position:center top;
+}
+
+}
+/* Mobile Hero Image Fix */
+
+
+@media(max-width:768px){
+
+.services{
+    padding-top:30px !important;
+}
+
+.services .title{
+    margin-bottom:20px !important;
+}
+
+}@media(max-width:768px){
+
+.reviews{
+    padding-top:15px !important;
+}
+
+.reviews .title{
+    margin-bottom:15px !important;
+}
+
+}
+/* silder review section */
+
+
+.review-grid{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    padding-bottom:10px;
+}
+
+.review-grid::-webkit-scrollbar{
+    height:6px;
+}
+
+.review-grid::-webkit-scrollbar-thumb{
+    background:#1565ff;
+    border-radius:10px;
+}
+
+.review-card{
+    min-width:300px;
+    flex-shrink:0;
+}
+/* Mobile Review Section Fix */
+/* MOBILE REVIEW SLIDER */
+@media(max-width:768px){
+
+.review-grid{
+    display:flex !important;
+    overflow-x:auto;
+    gap:15px;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:10px;
+}
+
+.review-grid::-webkit-scrollbar{
+    display:none;
+}
+
+.review-card{
+    min-width:85%;
+    flex-shrink:0;
+    scroll-snap-align:center;
+}
+
+}.reviews .title p{
+    margin-top:2px !important;
+}@media(max-width:768px){
+
+.review-grid{
+    display:flex;
+    overflow-x:auto;
+    gap:12px;
+    padding-bottom:10px;
+}
+
+.review-card{
+    min-width:250px;
+    max-width:250px;
+    padding:15px;
+}
+
+.review-card h3{
+    font-size:16px;
+    margin:8px 0;
+}
+
+.review-card p{
+    font-size:12px;
+    line-height:1.4;
+}
+
+.stars{
+    font-size:16px;
+}
+
+}
+/* Mobile comment form fix */
+
+/* MOBILE CONTACT SECTION */
+@media(max-width:768px){
+
+.contact{
+    padding:40px 15px;
+}
+
+.contact-box{
+    padding:25px 15px;
+    border-radius:15px;
+}
+
+.contact-box h2{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.contact-box p{
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.contact-btn{
+    margin-top:12px;
+    padding:12px 25px;
+    font-size:14px;
+    border-radius:8px;
+}
+
+}
+/* give me your review section fix */
+
+/* MOBILE REVIEW FORM */
+@media(max-width:768px){
+
+.review-form{
+    margin-top:25px;
+    padding:20px 15px;
+    border-radius:15px;
+}
+
+.review-form h3{
+    font-size:20px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea{
+    width:100%;
+    padding:12px;
+    font-size:14px;
+    border-radius:8px;
+}
+
+.review-form textarea{
+    min-height:90px;
+}
+
+.review-form button{
+    width:100%;
+    padding:12px;
+    font-size:15px;
+    border-radius:8px;
+}
+
+}
+
+
+/* contact section fix *8888888888888888888888888888888888888888888888888/* MOBILE CONTACT SECTION */
+
+/* Contact Section Up */
+
+.contact{
+    margin-top:-50px !important;
+}
+
+@media(max-width:768px){
+
+.contact{
+    margin-top:-80px !important;
+}
+
+}@media (max-width:768px){
+
+
+
+}/* HERO LOGO FLOAT ANIMATION */
+
+.hero-right img{
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+/* pop ....................*/
+
+body{
+    animation: pageLoad 1s ease-out;
+}
+
+@keyframes pageLoad{
+    0%{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
